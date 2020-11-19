@@ -19,4 +19,5 @@ export default TutorContentCreator
 const Hero = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 700px;
 `

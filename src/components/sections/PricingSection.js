@@ -1,84 +1,89 @@
 import React from "react"
 import styled from "styled-components"
+import Render from "./Render"
 
 function PricingSection() {
   return (
-    <CardHero>
-      <DailyCard>
-        <Title>Daily</Title>
-        <SubTitle>R60</SubTitle>
-        <Text>
-          <img alt="" src="images/icons/check.svg" />
-          Access to contents
-        </Text>
-        <Text>
-          <img alt="" src="images/icons/check.svg" />
-          Unlimited Papers and Memorandum{" "}
-        </Text>
-        <Text>
-          <img alt="" src="images/icons/check.svg" />
-          2x Quiz
-        </Text>
+    <Hero>
+      <Render firstButton="Online" secondButton="Personal" />
 
-        <Button>
-          <img alt="" src="images/icons/check-blue.svg" />
-          Subscribe
-        </Button>
-      </DailyCard>
-      <MontlyCard>
-        <Title>Montly</Title>
-        <SubTitle>R800</SubTitle>
+      <CardHero>
+        <DailyCard>
+          <Title>Daily</Title>
+          <SubTitle>R60</SubTitle>
+          <Text>
+            <img alt="" src="images/icons/check.svg" />
+            Access to contents
+          </Text>
+          <Text>
+            <img alt="" src="images/icons/check.svg" />
+            Unlimited Papers and Memorandum{" "}
+          </Text>
+          <Text>
+            <img alt="" src="images/icons/check.svg" />
+            2x Quiz
+          </Text>
 
-        <Text>
-          <img alt="" src="images/icons/check.svg" />
-          4h Online classes (R100 + R10)
-        </Text>
-        <Text>
-          <img alt="" src="images/icons/check.svg" />
-          Access to contents
-        </Text>
-        <Text>
-          <img alt="" src="images/icons/check.svg" />
-          Unlimited Papers and Memorandum
-        </Text>
-        <Text>
-          <img alt="" src="images/icons/check.svg" />
-          Unlimited Quiz{" "}
-        </Text>
-        <Button>
-          <img alt="" src="images/icons/check-blue.svg" />
-          Subscribe
-        </Button>
-      </MontlyCard>
-      <WeeklyCard>
-        <Title>Weekly</Title>
-        <SubTitle>R260</SubTitle>
-        <Text>
-          <img alt="" src="images/icons/check.svg" />
-          1h Online class (R100 + R10)
-        </Text>
-        <Text>
-          <img alt="" src="images/icons/check.svg" />
-          Unlimited Papers and Memorandum{" "}
-        </Text>
-        <Text>
-          <img alt="" src="images/icons/check.svg" />
-          8x Quiz
-        </Text>
-        <Button>
-          <img alt="" src="images/icons/check-blue.svg" />
-          Subscribe
-        </Button>
-      </WeeklyCard>
-    </CardHero>
+          <Button>
+            <img alt="" src="images/icons/check-blue.svg" />
+            Subscribe
+          </Button>
+        </DailyCard>
+        <MontlyCard>
+          <Title>Montly</Title>
+          <SubTitle>R800</SubTitle>
+
+          <Text>
+            <img alt="" src="images/icons/check.svg" />
+            4h Online classes (R100 + R10)
+          </Text>
+          <Text>
+            <img alt="" src="images/icons/check.svg" />
+            Access to contents
+          </Text>
+          <Text>
+            <img alt="" src="images/icons/check.svg" />
+            Unlimited Papers and Memorandum
+          </Text>
+          <Text>
+            <img alt="" src="images/icons/check.svg" />
+            Unlimited Quiz{" "}
+          </Text>
+          <Button>
+            <img alt="" src="images/icons/check-blue.svg" />
+            Subscribe
+          </Button>
+        </MontlyCard>
+        <WeeklyCard>
+          <Title>Weekly</Title>
+          <SubTitle>R260</SubTitle>
+          <Text>
+            <img alt="" src="images/icons/check.svg" />
+            1h Online class (R100 + R10)
+          </Text>
+          <Text>
+            <img alt="" src="images/icons/check.svg" />
+            Unlimited Papers and Memorandum{" "}
+          </Text>
+          <Text>
+            <img alt="" src="images/icons/check.svg" />
+            8x Quiz
+          </Text>
+          <Button>
+            <img alt="" src="images/icons/check-blue.svg" />
+            Subscribe
+          </Button>
+        </WeeklyCard>
+      </CardHero>
+    </Hero>
   )
 }
 
 export default PricingSection
 
+const Hero = styled.div``
 const CardHero = styled.div`
-  margin-left: 80px;
-  margin-bottom: 80px;
+  padding: 60px 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 

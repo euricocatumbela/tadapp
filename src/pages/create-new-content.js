@@ -30,4 +30,5 @@ const Hero = styled.div`
   display: grid;
   grid-template-rows: repeat(1, 1fr);
   grid-gap: 100px;
+  padding-bottom: 300px;
 `

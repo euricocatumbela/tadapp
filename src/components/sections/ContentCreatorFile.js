@@ -6,6 +6,7 @@ import { Link } from "gatsby"
 const ContentFile = () => {
   return (
     <Hero>
+      {/* <h1 style={{ color: "red" }}>Hello</h1> */}
       <HeroGroup>
         <CreateContent>
           <Title> Create new content</Title>

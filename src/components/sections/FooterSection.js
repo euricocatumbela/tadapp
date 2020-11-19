@@ -110,8 +110,7 @@ const FooterHero = styled.div`
 const FooterGroup = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding-bottom: 232px;
-  padding-top: 100px;
+  padding: 200px 30px;
 
   @media (max-width: 640px) {
     display: grid;

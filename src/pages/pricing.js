@@ -3,28 +3,25 @@ import React from "react"
 import SEO from "../components/layout/seo"
 import styled from "styled-components"
 import PricingSection from "../components/sections/PricingSection"
-import FooterSection from "../components/sections/FooterSection"
-import FooterContentextProvider from "../context/FooterContext"
-import WavesSection from "../components/sections/WaveSection"
+import Layout from "../components/layout/layout"
+import HeaderSection from "../components/sections/HeaderSection"
+
 function Pricing() {
   return (
-    // <Layout>
-
     <HeroSection>
       <SEO title="pricing" />
+      <Layout>
+        <HeaderSection />
+        <HeroGroup>
+          <Title>Pricing Plans</Title>
+          <Content>
+            Get access to your plan courses, in person classes, tutorials,
+            downloads, and priority support.
+          </Content>
+        </HeroGroup>
 
-      <HeroGroup>
-        <Title>Pricing Plans</Title>
-        <Content>
-          Get access to your plan courses, in person classes, tutorials,
-          downloads, and priority support.
-        </Content>
-      </HeroGroup>
-      <PricingSection />
-      <WavesSection />
-      <FooterContentextProvider>
-        <FooterSection />
-      </FooterContentextProvider>
+        <PricingSection />
+      </Layout>
     </HeroSection>
 
     // </Layout>
@@ -34,13 +31,12 @@ export default Pricing
 
 const HeroSection = styled.div`
   background: linear-gradient(180deg, #191a43 0%, #442d85 100%);
-  margin-top: 0px;
-  width: 100%;
-  padding-top: 170px;
-  padding-bottom: 0px;
 `
 
-const HeroGroup = styled.div``
+const HeroGroup = styled.div`
+  margin: 0 0 0 0;
+  padding: 150px 30px;
+`
 const Title = styled.h1`
   font-style: normal;
   font-weight: bold;
