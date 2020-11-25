@@ -1,0 +1,6 @@
+type Subject @model {
+  id: ID!
+  name: String
+  course: String
+  level: String
+}

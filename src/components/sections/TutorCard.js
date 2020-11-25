@@ -1,7 +1,9 @@
-import React from "react"
+import React, { useContext } from "react"
 import styled from "styled-components"
+import { TutorContext } from "../../context/TutorContext"
 
-const TutorCard = props => {
+const TutorCard = () => {
+  const { tutor } = useContext(TutorContext)
   return (
     <HeroCard>
       <HeroGroup>
@@ -9,8 +11,8 @@ const TutorCard = props => {
           <ProfileDescription>
             <Content>
               <img alt="" src="/images/icons/eurico.jpeg" />
-              <Title>{props.title}</Title>
-              <Position>{props.position}</Position>
+              <Title>{tutor.title}</Title>
+              <Position>{tutor.position}</Position>
               <Description>
                 <span role="img" aria-label="star">
                   ⭐️ ⭐️ ⭐️ ⭐️ ⭐️
@@ -20,16 +22,16 @@ const TutorCard = props => {
           </ProfileDescription>
           <ProfileContent>
             <DescritionContent>
-              <HeadingContent>{props.headingContent}</HeadingContent>
-              <ParagraphContent>{props.paragraphContent}</ParagraphContent>
+              <HeadingContent>{tutor.headingContent}</HeadingContent>
+              <ParagraphContent>{tutor.paragraphContent}</ParagraphContent>
             </DescritionContent>
             <DescritionContent>
-              <HeadingContent>{props.headingContent1}</HeadingContent>
-              <ParagraphContent>{props.paragraphContent1}</ParagraphContent>
+              <HeadingContent>{tutor.headingContent1}</HeadingContent>
+              <ParagraphContent>{tutor.paragraphContent1}</ParagraphContent>
             </DescritionContent>
             <DescritionContent>
-              <HeadingContent>{props.headingContent2}</HeadingContent>
-              <ParagraphContent>{props.paragraphContent2}</ParagraphContent>
+              <HeadingContent>{tutor.headingContent2}</HeadingContent>
+              <ParagraphContent>{tutor.paragraphContent2}</ParagraphContent>
             </DescritionContent>
           </ProfileContent>
         </ProfileCard>

@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-tadnewsite-dev-12848-authRole",
+      "UnauthRoleArn": "arn:aws:iam::648766712947:role/amplify-tadnewsite-dev-12848-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::648766712947:role/amplify-tadnewsite-dev-12848-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-tadnewsite-dev-12848-deployment",
+      "UnauthRoleName": "amplify-tadnewsite-dev-12848-unauthRole",
+      "StackName": "amplify-tadnewsite-dev-12848",
+      "StackId": "arn:aws:cloudformation:us-east-1:648766712947:stack/amplify-tadnewsite-dev-12848/fd91dd80-2abe-11eb-aa18-0e22fadd816f",
+      "AmplifyAppId": "d3p6gxe6alt5p9"
+    },
+    "categories": {
+      "auth": {
+        "tadnewsitea4ba1693": {}
+      }
+    }
+  }
+}

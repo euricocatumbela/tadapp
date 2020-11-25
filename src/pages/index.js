@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
 import HeroSection from "../components/sections/HeroSection"
@@ -9,8 +9,7 @@ import EdgeHero from "../components/sections/EdgeHero"
 import PricingHeading from "../components/sections/PricingHeading"
 import HeroProfile from "../components/sections/HeroProfile"
 
-// import PricingSection from "../components/sections/PricingSection"
-function IndexPage() {
+const MainLayout = () => {
   return (
     <Layout>
       <HeaderSection />
@@ -18,11 +17,40 @@ function IndexPage() {
       <HeroSection />
       <SemiHeroSection />
       <EdgeHero />
+
       <PricingHeading />
-      <HeroProfile />
       <PricingSection />
     </Layout>
   )
+}
+
+const MainLayout2 = () => {
+  return (
+    <Layout>
+      <HeaderSection />
+      <SEO title="home" />
+      <HeroSection />
+      <SemiHeroSection />
+      <EdgeHero />
+      <HeroProfile />
+      <PricingHeading />
+      <PricingSection />
+    </Layout>
+  )
+}
+
+function IndexPage() {
+  const [isMobile, setMobile] = useState(
+    window.matchMedia("(max-width:640px)").matches
+  )
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setMobile(window.matchMedia("(max-width:640px)").matches)
+    })
+  })
+
+  return <>{isMobile ? <MainLayout /> : <MainLayout2 />}</>
 }
 
 export default IndexPage

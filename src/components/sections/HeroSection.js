@@ -1,6 +1,18 @@
 import React from "react"
 import styled from "styled-components"
 import PricingButton from "../buttons/PricingButton"
+
+const SearchBarField = () => {
+  return (
+    <HeroSearchBar>
+      <HerouGroup>
+        <Input placeholder="What subject do you need help with?(e.g. 'Calculs') "></Input>
+        <img alt="" src="images/icons/searchbar.svg" />
+      </HerouGroup>
+    </HeroSearchBar>
+  )
+}
+
 function HeroSection() {
   return (
     <Wrapper>
@@ -18,18 +30,14 @@ function HeroSection() {
           </Description>
           <PricingButton />
 
-          <Descript>Get in-person class for R100 +R10</Descript>
+          <Descript>
+            Get in-person class for R100 +R10, Purchase includes access to any
+            subject, more than 1000+ premium content, 24 hours of tutoring,
+            source files and memos.
+          </Descript>
         </TextWrapper>
       </ContentWrapper>
-      <HeroSearchBar>
-        <HerouGroup>
-          <img alt="" src="images/icons/search.svg" />
-          <SearchBar placeholder="What subject do you need help with?(e.g. 'Calculs') "></SearchBar>
-        </HerouGroup>
-      </HeroSearchBar>
-      {/* <img src="images/waves/hero-wave1.svg" />
-      <img src="images/waves/hero-wave2.svg" /> */}
-      {/* <img src="images/waves/hero-wave3.svg" /> */}
+      <SearchBarField />
     </Wrapper>
   )
 }
@@ -39,12 +47,23 @@ export default HeroSection
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
+  /* background: url("/images/waves/hero-wave1.svg"); */
+  background: url("/images/waves/wave-focus.svg");
+  /* background: linear-gradient(180deg, #4316db 0%, #9076e7 100%); */
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `
 const ContentWrapper = styled.div`
   max-width: 1234px;
   margin: 0 auto;
   padding: 200px 30px;
+
+  @media (max-width: 640px) {
+    margin: 0 auto;
+    padding: 120px 0 10px 0;
+  }
 `
 
 const TextWrapper = styled.div`
@@ -57,6 +76,40 @@ const Title = styled.h1`
   font-weight: bold;
   font-size: 60px;
   color: white;
+  /* overflow: hidden;
+  white-space: nowrap;
+  animation: typing 14s steps(37) forwards, blink-caret 0.8s step-end infinite;
+  animation-iteration-count: infinite; */
+
+  /* @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #fff;
+    }
+  }
+  @keyframes typing {
+    0% {
+      width: 0%;
+    }
+    30% {
+      width: 100%;
+    }
+    80% {
+      width: 100%;
+    }
+    90% {
+      width: 0%;
+    }
+    100% {
+      width: 0%;
+    }
+    0% {
+      height: 100%;
+    }
+  } */
 `
 const Description = styled.p`
   margin-left: 20px;
@@ -70,60 +123,56 @@ const Descript = styled.p`
   color: white;
   margin-left: 20px;
 `
-const SearchBar = styled.input`
-  width: 462px;
-  height: 44px;
-  font-size: 16px;
-  line-height: 130%;
-  /* color: rgb(0, 0, 0); */
-  margin-left: 40px;
-  margin-top: 0px;
-  outline: none;
-  color: -internal-light-dark(black, white);
-  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
-  -webkit-rtl-ordering: logical;
-  cursor: text;
 
-  border: none;
-  border-radius: 30px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 20px 40px,
-    rgba(255, 255, 255, 0.3) 0px 0px 0px 0.5px inset;
-  box-sizing: border-box;
-  /* Note: backdrop-filter has minimal browser support */
-
-  border-radius: 30px;
-`
 const HeroSearchBar = styled.div`
-  max-width: 1234px;
-  margin: 0 380px 0 0;
+  margin-right: 200px;
   padding: 200px 30px;
 
-  img {
-    max-width: 100%;
-    position: absolute;
-    left: 5px;
-    border-style: none;
-    width: 40px;
-    height: 40px;
+  @media (max-width: 640px) {
+    margin: 0 0px 0 0;
+    padding: 0 auto;
+  }
+`
+
+const Input = styled.input`
+  margin-left: 60px;
+  width: 504px;
+  height: 44px;
+  font-size: 16px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  cursor: text;
+  @media (max-width: 640px) {
+    width: 260px;
+    height: 44px;
+    font-size: 10px;
   }
 `
 
 const HerouGroup = styled.div`
   width: 504px;
-  height: 44px;
-  /* background: rgb(255, 255, 255); */
-  background: linear-gradient(
-    180deg,
-    rgba(99, 106, 150, 0.4) 0%,
-    rgba(182, 186, 214, 0.25) 100%
-  );
-  border: 0.5px solid rgba(255, 255, 255, 0.3);
-  border: 0.5px solid rgba(255, 255, 255, 0.3);
-  border: 0.5px solid rgba(255, 255, 255, 0.3);
-  box-sizing: border-box;
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(40px);
-  /* Note: backdrop-filter has minimal browser support */
-
+  height: 46px;
+  background: rgb(255, 255, 255);
   border-radius: 30px;
+
+  @media (max-width: 640px) {
+    width: 260px;
+    height: 46px;
+  }
+  img {
+    position: absolute;
+    left: 720px;
+    top: 210px;
+    width: 30px;
+    height: 30px;
+
+    @media (max-width: 640px) {
+      position: absolute;
+      left: 50px;
+      top: 810px;
+      width: 30px;
+      height: 30px;
+    }
+  }
 `

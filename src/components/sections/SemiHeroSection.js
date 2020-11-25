@@ -48,6 +48,7 @@ export default SemiHeroSection
 const Wrapper = styled.div`
   /* display: grid;
   grid-template-rows: repeat(1, 1fr); */
+  background: url("/images/waves/hero-wave2.svg");
 `
 
 const ContentWrapper = styled.div`
@@ -55,7 +56,10 @@ const ContentWrapper = styled.div`
   margin: 0 auto;
   padding: 300px 30px;
 
-  /* background-image: url("../images/waves/wave-form.svg"); */
+  @media (max-width: 640px) {
+    margin: 0 auto;
+    padding: 20px 0px;
+  }
 `
 
 const CardGroup = styled.div`
@@ -64,14 +68,26 @@ const CardGroup = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
   justify-items: center;
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;
+  }
 `
-const TextWrapper = styled.div``
+const TextWrapper = styled.div`
+  margin: 0 auto;
+`
 
 const Title = styled.h1`
   font-weight: 700;
   color: azure;
   font-size: 34px;
   text-align: center;
+
+  @media (max-width: 640px) {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
 `
 const Description = styled.div`
   display: grid;

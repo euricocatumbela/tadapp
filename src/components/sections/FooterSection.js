@@ -23,7 +23,7 @@ function FooterSection(props) {
             {firstColumn.pricing}
           </Link>
 
-          <Link to="/subjects">
+          <Link to="tutors">
             <img alt="" src="images/icons/courses.svg" />
             {firstColumn.courses}
           </Link>
@@ -34,11 +34,11 @@ function FooterSection(props) {
         </FirstRowGroup>
 
         <SecondRowGroup>
-          <Link to="/accout">
+          <Link to="tutors">
             <img alt="" src="images/icons/account.svg" />
             {secondColumn.account}
           </Link>
-          <Link to="/help">
+          <Link to="tutors">
             <img alt="" src="images/icons/help.svg" />
             {secondColumn.help}
           </Link>
@@ -46,11 +46,11 @@ function FooterSection(props) {
             <img alt="" src="images/icons/tutorials.svg" />
             {secondColumn.tutoring}
           </Link>
-          <Link to="/community">
+          <Link to="tutors">
             <img alt="" src="images/icons/team.svg" />
             {secondColumn.community}
           </Link>
-          <Link to="/founders">
+          <Link to="tutors">
             <img alt="" src="images/icons/profile.svg" />
             {secondColumn.founders}
           </Link>
@@ -72,8 +72,8 @@ export default FooterSection
 
 const FooterHero = styled.div`
   width: 100%;
-
-  background: rgb(30, 19, 87);
+  background: url("/images/waves/footer-wave3.svg");
+  /* background: rgb(30, 19, 87); */
 
   a {
     font-style: normal;
@@ -110,7 +110,7 @@ const FooterHero = styled.div`
 const FooterGroup = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 200px 30px;
+  padding: 105px 30px;
 
   @media (max-width: 640px) {
     display: grid;

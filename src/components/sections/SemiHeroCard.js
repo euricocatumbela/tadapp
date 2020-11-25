@@ -23,6 +23,11 @@ const Card = styled.div`
   grid-template-rows: 1fr 1fr;
   transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 
+  @media (max-width: 640px) {
+    width: 300px;
+    height: 225px;
+  }
+
   img {
     position: absolute;
     top: 0;

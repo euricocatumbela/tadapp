@@ -66,11 +66,16 @@ const Hero = styled.div`
   padding: 100px 30px;
   display: grid;
   grid-gap: 30px;
+  background: url("/images/waves/hero-wave2.svg");
 `
 const HeroGroup = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `
 const Title = styled.h1`
   margin: 0;
@@ -78,6 +83,10 @@ const Title = styled.h1`
   color: azure;
   font-size: 34px;
   text-align: center;
+
+  @media (max-width: 640px) {
+    font-size: 22px;
+  }
 `
 const WrapperText = styled.div`
   margin: 0 auto;
@@ -94,6 +103,10 @@ const Heading = styled.h3`
   font-weight: 600px;
   color: azure;
   margin-bottom: 8px;
+
+  @media (max-width: 640px) {
+    font-size: 18px;
+  }
 `
 const Paragraph = styled.p`
   font-size: 15px;

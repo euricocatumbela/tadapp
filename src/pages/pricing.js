@@ -30,7 +30,8 @@ function Pricing() {
 export default Pricing
 
 const HeroSection = styled.div`
-  background: linear-gradient(180deg, #191a43 0%, #442d85 100%);
+  background: url("/images/waves/round-wave1.svg");
+  /* background: linear-gradient(180deg, #191a43 0%, #442d85 100%); */
 `
 
 const HeroGroup = styled.div`
