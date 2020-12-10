@@ -14,22 +14,22 @@ function FooterSection(props) {
             <img alt="" src="images/icons/home.svg" />
             {firstColumn.home}
           </Link>
-          <Link to="/content">
-            <img alt="" src="images/icons/pen.svg" />
-            {firstColumn.content}
+          <Link to="/signin">
+            <img alt="" src="images/icons/user.svg" />
+            {firstColumn.signin}
           </Link>
+          <Link to="/signup">
+            <img alt="" src="images/icons/user.svg" />
+            {firstColumn.signup}
+          </Link>
+
           <Link to="/pricing">
             <img alt="" src="images/icons/pricing.svg" />
             {firstColumn.pricing}
           </Link>
-
-          <Link to="tutors">
-            <img alt="" src="images/icons/courses.svg" />
-            {firstColumn.courses}
-          </Link>
           <Link to="/tutors">
             <img alt="" src="images/icons/more.svg" />
-            {firstColumn.tutors}
+            {firstColumn.tutor}
           </Link>
         </FirstRowGroup>
 
@@ -39,14 +39,14 @@ function FooterSection(props) {
             {secondColumn.account}
           </Link>
           <Link to="tutors">
+            <img alt="" src="images/icons/courses.svg" />
+            {secondColumn.subjects}
+          </Link>
+          <Link to="/tutoring">
             <img alt="" src="images/icons/help.svg" />
             {secondColumn.help}
           </Link>
-          <Link to="/tutoring">
-            <img alt="" src="images/icons/tutorials.svg" />
-            {secondColumn.tutoring}
-          </Link>
-          <Link to="tutors">
+          <Link to="/apply">
             <img alt="" src="images/icons/team.svg" />
             {secondColumn.community}
           </Link>
@@ -73,19 +73,17 @@ export default FooterSection
 const FooterHero = styled.div`
   width: 100%;
   background: url("/images/waves/footer-wave3.svg");
-  /* background: rgb(30, 19, 87); */
 
   a {
-    font-style: normal;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 130%;
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: 400;
     color: rgb(255, 255, 255);
-    text-align: center;
+    /* text-align: center; */
     margin: auto auto auto 80px;
-    padding: 15px 18px 18px 22px;
+    padding-bottom: 20px;
     cursor: pointer;
-
     @media (max-width: 640px) {
       margin: auto auto auto 30px;
       font-size: 12px;
@@ -94,8 +92,6 @@ const FooterHero = styled.div`
 
   a:hover {
     color: rgba(255, 255, 255, 0.6);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-    transform: translateY (-2px);
     border-style: solid;
     border-radius: 10px;
     cursor: pointer;

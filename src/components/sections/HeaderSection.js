@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import Sigin from "../../pages/signin"
+// import AuthForm from "../forms/AuthForm"
 
 const MobileList = () => {
   return (
@@ -36,22 +36,12 @@ const MobileList = () => {
   )
 }
 
-const ToggleButton = () => {
-  const [active, setActive] = useState(false)
-  function handleClick() {
-    setActive(!active)
-  }
-  return (
-    <>
-      <NewButton onClick={handleClick}>
-        <img alt="" src="images/icons/account.svg" />
-      </NewButton>
-      {active ? <Sigin /> : null}
-    </>
-  )
-}
-
-const List = () => {
+const List = props => {
+  // const [active, setActive] = useState(false)
+  // function handleClick(event) {
+  //   setActive(!active)
+  //   event.preventDefault()
+  // }
   return (
     <HeaderGroup>
       <Link to="/">TakeAnyDoubt</Link>
@@ -67,7 +57,17 @@ const List = () => {
         <img alt="" src="images/icons/tutorials.svg" />
         Tutoring
       </Link>
-      <ToggleButton />
+
+      {/* <Toogle onClick={event => handleClick(event)}> */}
+
+      <Link to="/signin">
+        <Toogle>
+          <img alt="" src="images/icons/account.svg" />
+        </Toogle>
+      </Link>
+
+      {/* </Toogle> */}
+      {/* {active && <AuthForm isRegistered={!props.isRegistered} />} */}
     </HeaderGroup>
   )
 }
@@ -79,8 +79,8 @@ const MenuMobile = () => {
       <Button onClick={() => setActive(!active)}>
         {active ? "" : ""}
         <img alt="" src="/images/icons/hamburger.svg" />
+        {active && <MobileList />}
       </Button>
-      {active && <MobileList />}
     </HeroMenu>
   )
 }
@@ -203,34 +203,19 @@ const Button = styled.button`
   }
 `
 
-// const ButtonMenu = styled.button`
-//   background: rgba(15, 14, 71, 0.3);
-//   box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 0.5px inset;
-//   backdrop-filter: blur(40px);
-//   width: 50px;
-//   height: 50px;
-//   border-radius: 90px;
-//   border: none;
-//   outline: none;
-//   img {
-//     border-style: none;
-
-//     margin: 0px 10px -4px 6px;
-//   }
-// `
-
-const NewButton = styled.button`
+const Toogle = styled.div`
   background: rgba(15, 14, 71, 0.3);
   box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 0.5px inset;
   backdrop-filter: blur(40px);
   width: 50px;
   height: 50px;
-  border-radius: 90px;
+  border-radius: 50%;
   border: none;
   outline: none;
   img {
     border-style: none;
 
-    margin: 0px 10px -4px 6px;
+    margin: 10px 0px -4px 12px;
   }
+  cursor: pointer;
 `

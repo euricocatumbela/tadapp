@@ -4,17 +4,17 @@ export const FooterContext = createContext()
 function FooterContextProvider(props) {
   const [firstColumn] = useState({
     home: "Home",
-    content: "Content",
+    signin: "Log in",
+    signup: "Signup",
     pricing: "Pricing",
-    courses: "Courses",
-    tutors: "Tutors",
+    tutor: "tutors",
   })
 
   const [secondColumn] = useState({
     account: "Account",
+    subjects: "Subjects",
     help: "HelpMe",
-    tutoring: "Tutoring",
-    community: "Community",
+    community: "Become a tutor",
     founders: "Founders",
   })
 

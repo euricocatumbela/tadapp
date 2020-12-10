@@ -16,18 +16,7 @@ module.exports = {
         path: `${__dirname}/static/images`,
       },
     },
-    {
-      resolve: `gatsby-source-graphql`,
-      options: {
-        typeName: `Subjects`,
-        fieldName: `tadnewsite`,
-
-        url: `http://192.168.0.100:20002/graphql`,
-        headers: {
-          "x-api-key": `da2-fakeApiId123456`,
-        },
-      },
-    },
+    `gatsby-plugin-styled-components`,
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

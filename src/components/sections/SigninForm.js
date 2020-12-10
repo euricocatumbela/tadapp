@@ -4,8 +4,15 @@ import SignUp from "../../pages/signup"
 
 const SigninForm = () => {
   const [active, setActive] = useState(false)
+  const [isActive, setIsActive] = useState(false)
+
   return (
     <Hero>
+      <button onClick={() => setIsActive(!isActive)}>
+        {isActive ? "Active" : "Not Uctive"}
+        {isActive ? <SigninForm /> : null}
+      </button>
+
       <HeroCard>
         <HeroGroup>
           <img alt="" src="images/galery/cover.svg" />
@@ -43,7 +50,9 @@ export default SigninForm
 
 const Hero = styled.div`
   position: absolute;
-  width: 100%;
+  top: 30px;
+  left: 230px;
+  right: 200px;
 `
 
 const HeroCard = styled.div`
@@ -87,7 +96,6 @@ const FormGroup = styled.form`
   margin: 50px 0 0px 0;
   width: 320px;
   height: 488.5px;
-
   display: grid;
   grid-gap: 1px;
 
@@ -96,8 +104,7 @@ const FormGroup = styled.form`
   }
 `
 const Input = styled.input`
-  /* text-align: center; */
-  margin-left: 40px;
+  margin-left: 60px;
   color: white;
   font-weight: normal;
   font-size: 15px;
@@ -105,10 +112,6 @@ const Input = styled.input`
   height: 44px;
   background: transparent;
   border: none;
-  /* border: 0.5px solid rgba(255, 255, 255, 0.3);
-  box-sizing: border-box;
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(40px); */
   border-radius: 30px;
   outline: none;
 `
@@ -140,8 +143,8 @@ const InputDiv1 = styled.div`
   border-radius: 30px;
 
   img {
-    position: absolute;
-    top: 5px;
+    position: relative;
+    bottom: 40px;
     left: 10px;
     /* top: 210px; */
     height: 30px;
@@ -160,8 +163,8 @@ const InputDiv2 = styled.div`
   border-radius: 30px;
 
   img {
-    position: absolute;
-    top: 5px;
+    position: relative;
+    bottom: 40px;
     left: 10px;
     /* top: 210px; */
     height: 30px;

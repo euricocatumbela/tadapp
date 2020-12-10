@@ -22,6 +22,17 @@ const Card = styled.div`
   display: grid;
   grid-template-rows: 1fr 1fr;
   transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform: rotateY(-20deg) rotateX(30deg);
+
+  perspective: 5000;
+
+  * {
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  :hover {
+    transform: rotateY(0deg) rotateY(0);
+    filter: brightness(130%) saturate(100%);
+  }
 
   @media (max-width: 640px) {
     width: 300px;
