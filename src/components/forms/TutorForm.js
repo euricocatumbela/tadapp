@@ -110,17 +110,18 @@ export default TutorForm
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  background: url("/images/waves/wave-focus.svg");
-  padding: 160px 0 100px 0;
+  background: white;
+  /* padding: 160px 0 100px 0; */
 `
 const FormWrapper = styled.div`
   padding: 40px 0;
 `
 
 const Form = styled.div`
-  margin: 60px 400px 0 400px;
   display: grid;
   grid-template-columns: 350px 350px;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
 `
 
@@ -155,7 +156,7 @@ const InputUpload = styled.input`
 `
 
 const Profile = styled.div`
-  margin: 0 auto;
+  margin: 80px auto;
   background: rgba(50, 61, 109, 0.5);
   width: 150px;
   height: 150px;
@@ -163,24 +164,16 @@ const Profile = styled.div`
 `
 
 const ApplyButton = styled.button`
-  margin: 30px 650px;
-  width: 200px;
+  margin: 20px 600px;
+  width: 250px;
   height: 50px;
-  padding: 12px;
-  background: linear-gradient(91.4deg, #2fb8ff 0%, #9eecd9 100%);
-  box-shadow: 0px 20px 40px rgba(147, 231, 221, 0.3);
-  border: 0.5px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
+  background: green;
   font-size: 20px;
   color: white;
-  font-weight: bold;
+  font-weight: 400;
   text-align: center;
   text-transform: uppercase;
   outline: none;
   cursor: pointer;
-  transition: 1s;
-
-  :hover {
-    transform: translateY(-4px);
-  }
 `

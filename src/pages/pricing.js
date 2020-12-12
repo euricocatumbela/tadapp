@@ -4,14 +4,14 @@ import SEO from "../components/layout/seo"
 import styled from "styled-components"
 import PricingSection from "../components/sections/PricingSection"
 import Layout from "../components/layout/layout"
-import HeaderSection from "../components/sections/HeaderSection"
+import Header from "../components/sections/Header"
 
 function Pricing() {
   return (
     <HeroSection>
       <SEO title="pricing" />
       <Layout>
-        <HeaderSection />
+        <Header />
         <HeroGroup>
           <Title>Pricing Plans</Title>
           <Content>

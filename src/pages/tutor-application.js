@@ -2,12 +2,12 @@ import React from "react"
 import TutorForm from "../components/forms/TutorForm"
 import SEO from "../components/layout/seo"
 import styled from "styled-components"
-import HeaderSection from "../components/sections/HeaderSection"
+import Header from "../components/sections/Header"
 
 const TutorApplication = () => {
   return (
     <Wrapper>
-      <HeaderSection />
+      <Header />
       <SEO title="tutor-application" />
       <TutorForm />
     </Wrapper>

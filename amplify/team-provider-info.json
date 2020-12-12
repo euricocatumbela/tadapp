@@ -1,0 +1,23 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-websitetad-dev-25746-authRole",
+            "UnauthRoleArn": "arn:aws:iam::648766712947:role/amplify-websitetad-dev-25746-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::648766712947:role/amplify-websitetad-dev-25746-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-websitetad-dev-25746-deployment",
+            "UnauthRoleName": "amplify-websitetad-dev-25746-unauthRole",
+            "StackName": "amplify-websitetad-dev-25746",
+            "StackId": "arn:aws:cloudformation:us-east-2:648766712947:stack/amplify-websitetad-dev-25746/11346bc0-3c15-11eb-83fa-026f6d3a35c4",
+            "AmplifyAppId": "d2tj0op5fhw106"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d2tj0op5fhw106",
+                    "type": "manual"
+                }
+            }
+        }
+    }
+}

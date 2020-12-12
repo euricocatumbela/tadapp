@@ -38,7 +38,7 @@ function FooterSection(props) {
             <img alt="" src="images/icons/account.svg" />
             {secondColumn.account}
           </Link>
-          <Link to="tutors">
+          <Link to="/subject">
             <img alt="" src="images/icons/courses.svg" />
             {secondColumn.subjects}
           </Link>

@@ -14,7 +14,7 @@ const SearchBar = () => {
 export default SearchBar
 
 const Wrapper = styled.div`
-  margin-right: 200px;
+  /* margin-right: 200px; */
   padding: 200px 30px;
 
   @media (max-width: 640px) {

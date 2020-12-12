@@ -1,5 +1,3 @@
-const { graphql } = require("gatsby")
-
 module.exports = {
   siteMetadata: {
     title: `Takeanydoubt`,
